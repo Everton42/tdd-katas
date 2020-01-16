@@ -1,0 +1,38 @@
+package com.kata;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class BowlingGameTest {
+
+    private final Game game = new Game();
+
+    @Test
+    public void testGutterGame() {
+        int rolls = 20;
+        int pins = 0;
+        rollMany(rolls, pins);
+        assertEquals(0, game.score());
+    }
+
+    @Test
+    public void testAllOnes() {
+        rollMany(20, 1);
+        assertEquals(20, game.score());
+    }
+
+    @Test
+    public void testOneSpare() {
+        game.roll(5);
+        game.roll(5);
+        game.roll(3);
+        rollMany(17, 0);
+        assertEquals(16, game.score());
+    }
+    private void rollMany(int rolls, int pins) {
+        for (int i = 0; i < rolls; i++) {
+            game.roll(pins);
+        }
+    }
+}
