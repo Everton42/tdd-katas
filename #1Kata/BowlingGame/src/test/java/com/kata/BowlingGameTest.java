@@ -24,15 +24,39 @@ public class BowlingGameTest {
 
     @Test
     public void testOneSpare() {
-        game.roll(5);
-        game.roll(5);
+        rollSpare();
         game.roll(3);
         rollMany(17, 0);
         assertEquals(16, game.score());
     }
+
+    @Test
+    public void testOneStrike() {
+        rollStrike();
+        game.roll(3);
+        game.roll(4);
+        rollMany(16, 0);
+        assertEquals(24, game.score());
+    }
+
+    @Test
+    public void testPerfectGame() {
+        rollMany(12, 10);
+        assertEquals(300, game.score());
+    }
+
     private void rollMany(int rolls, int pins) {
         for (int i = 0; i < rolls; i++) {
             game.roll(pins);
         }
+    }
+
+    private void rollSpare() {
+        game.roll(5);
+        game.roll(5);
+    }
+
+    private void rollStrike() {
+        game.roll(10);
     }
 }
