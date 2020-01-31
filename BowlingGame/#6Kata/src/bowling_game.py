@@ -16,7 +16,7 @@ class Game():
                 result += self.spare_score(frame_index)
                 frame_index += 2
             else:
-                result += self.commom_score(frame_index)
+                result += self.common_score(frame_index)
                 frame_index += 2
 
         return result
@@ -33,5 +33,5 @@ class Game():
     def spare_score(self, frame_index):
         return 10 + self._rolls[frame_index + 2]
 
-    def commom_score(self, frame_index):
+    def common_score(self, frame_index):
         return self._rolls[frame_index] + self._rolls[frame_index + 1]
