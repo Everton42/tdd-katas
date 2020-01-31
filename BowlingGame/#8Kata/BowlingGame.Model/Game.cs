@@ -30,7 +30,7 @@
                 }
                 else
                 {
-                    result += CommumScore(frameIndex);
+                    result += CommomScore(frameIndex);
                     frameIndex += 2;
                 }
             }
@@ -38,7 +38,7 @@
             return result;
         }
 
-        private int CommumScore(int frameIndex)
+        private int CommomScore(int frameIndex)
         {
             return Rolls[frameIndex] + Rolls[frameIndex + 1];
         }
