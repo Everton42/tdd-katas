@@ -44,7 +44,7 @@ public class GameTest {
 
     @Test
     public void perfectGame() {
-        rollMany(20, 10);
+        rollMany(12, 10);
         assertEquals(300, game.score());
     }
 

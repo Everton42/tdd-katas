@@ -44,7 +44,7 @@ class game_test(unittest.TestCase):
         self.assertEqual(26, result)
 
     def test_given_perfect_game_must_return_three_hundred(self):
-        self.roll_many(20, 10)
+        self.roll_many(12, 10)
 
         result = self._game.score()
 

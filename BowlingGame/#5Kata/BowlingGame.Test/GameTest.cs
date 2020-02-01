@@ -41,7 +41,7 @@ namespace BowlingGame.Test
         [Fact]
         public void PerfectGame()
         {
-            rollMany(20, 10);
+            rollMany(12, 10);
             Assert.Equal(300, game.Score());
         }
 

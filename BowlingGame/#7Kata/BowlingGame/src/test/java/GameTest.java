@@ -48,7 +48,7 @@ public class GameTest {
 
     @Test
     public void perfectGameShouldReturnThreeHundred() {
-        rollMany(20, 10);
+        rollMany(12, 10);
         
         int result = game.score();
         Assert.assertEquals(300, result);

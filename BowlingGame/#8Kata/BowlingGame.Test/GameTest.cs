@@ -61,7 +61,7 @@ namespace BowlingGame.Test
         [Fact]
         public void GivenGameRollWhenHitTenPinsInAllRollsThenReturnMaximumScore()
         {
-            RollMany(20, 10);
+            RollMany(12, 10);
 
             int result = Game.score();
             Assert.Equal(300, result);

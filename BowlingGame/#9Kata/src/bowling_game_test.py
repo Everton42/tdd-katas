@@ -43,7 +43,7 @@ class game_test(unittest.TestCase):
         self.assertEqual(26, result)
 
     def test_given_perfect_game_when_all_pins_fall_on_all_rolls_then_return_maximum_score(self):
-        self.roll_many(20, 10)
+        self.roll_many(12, 10)
 
         result = self._game.score()
 
